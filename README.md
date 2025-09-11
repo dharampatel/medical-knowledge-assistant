@@ -38,21 +38,4 @@ This project implements a production-ready medical knowledge assistant, combinin
    cd medical-knowledge-assistant
 
 
-Structure & Key Components
-
-Here’s an outline of the project structure and what each part does:
-
-├── app/
-│   ├── config.py           # configuration: LLM setup, retriever, SSL patching
-│   ├── state.py            # definition of AgentState datatype
-│   ├── prompts/            # prompt templates: classify, refine, summarize, explanation
-│   ├── nodes/              # individual workflow nodes: classify, retrieve, refine, fetch_trials, summarize, explain, etc.
-│   ├── workflow.py         # builds the LangGraph state graph and compiles the workflow
-│   └── api.py              # FastAPI app with /ask endpoint for streaming
-├── ui/
-│   └── streamlit_app.py    # Streamlit front end for user interaction
-├── requirements.txt        # required Python libraries
-├── .env.example            # template for environment variables
-└── README.md               # this file
-
 
