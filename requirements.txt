@@ -1,0 +1,13 @@
+langchain
+langgraph~=0.6.7
+langchain-community~=0.3.29
+langchain-google-genai~=2.1.10
+langchain-core~=0.3.75
+fastapi~=0.116.1
+uvicorn
+streamlit~=1.49.1
+xmltodict
+certifi~=2025.8.3
+python-dotenv~=1.1.1
+requests~=2.32.5
+sseclient~=0.0.27
