@@ -23,5 +23,5 @@ llm = ChatGoogleGenerativeAI(
     api_key=GOOGLE_API_KEY,
 )
 
-retriever = PubMedRetriever(max_results=10)
+retriever = PubMedRetriever(max_results=20)
 

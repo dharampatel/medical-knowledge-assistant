@@ -4,14 +4,14 @@ import json
 import time
 
 st.set_page_config(
-    page_title="Medical Knowledge Assistant",
+    page_title="Medical Assistant",
     page_icon="🧠",
     layout="wide"
 )
 
-st.title("🧠 Medical Knowledge Assistant")
+st.title("🧠 Medical Assistant")
 
-query = st.text_input("Enter your medical query:")
+query = st.text_input("Enter your medical query in Details:")
 
 if st.button("Submit") and query:
     url = f"http://127.0.0.1:8000/ask?query={query}"
@@ -86,12 +86,12 @@ if st.button("Submit") and query:
         # --- Right panel: Final outputs ---
         if summary:
             with final_summary_box:
-                st.subheader("📝 Final Summary")
+                st.subheader("📝 Medical Final Summary")
                 st.markdown(summary)
 
         if explanation:
             with final_explanation_box:
-                st.subheader("💡 Final Explanation")
+                st.subheader("💡 Medical Final Explanation")
                 st.markdown(explanation)
 
         if trials_count and trials:
@@ -107,7 +107,7 @@ if st.button("Submit") and query:
         # Update progress live
         step_counter += 1
         progress_bar.progress(min(step_counter / total_steps, 1.0))
-        time.sleep(0.05)
+        time.sleep(0.09)
 
     progress_bar.progress(1.0)
     st.success("✅ Workflow Completed!")
