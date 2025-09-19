@@ -1,7 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate
 
 classify_prompt = ChatPromptTemplate.from_template("""
-You are a domain classifier.
+You are an expert domain classifier.
 Question: {query}
 
 Answer ONLY with "medical" if this is related to diseases, treatments, drugs, or healthcare. 
@@ -11,7 +11,7 @@ Otherwise, answer "other".
 
 
 refine_prompt = ChatPromptTemplate.from_template("""
-You are a query refiner.
+You are an expert as query refiner.
 The user asked: {query}
 But PubMed did not return results.
 
